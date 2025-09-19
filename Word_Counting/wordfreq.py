@@ -3,6 +3,7 @@
 def tokenize(lines):
     words = []
     for line in lines:
+        # Counter for current letter
         start = 0
 
         while start < len(line):
