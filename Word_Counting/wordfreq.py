@@ -69,4 +69,13 @@ def countWords(words, stopWords):
             continue
     return frequencies    
 
-      
+def printTopMost(frequencies,n):
+    organized = sorted(frequencies.items(), key=lambda x : -x[1])
+    for i in range(n):
+        if i < len(organized):
+            word,freq = organized[i]
+            print(word.ljust(20) + str(freq).rjust(5))
+        
+        else:
+            break
+
