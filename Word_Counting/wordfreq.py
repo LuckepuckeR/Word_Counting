@@ -49,3 +49,24 @@ def tokenize(lines):
             start = end
 
     return words
+
+def countWords(words, stopWords):
+    Counter = 0
+    frequencies =  {}
+    for word in words:
+
+        if word not in stopWords and word not in frequencies:
+            frequencies[word] = 1 
+            Counter = Counter + 1
+            continue
+
+        if word not in stopWords:
+            frequencies[word] = frequencies[word] + 1
+            Counter = Counter + 1
+
+        if word in stopWords:
+            Counter = Counter + 1
+            continue
+    return frequencies    
+
+      
